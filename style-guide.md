@@ -1,5 +1,15 @@
 # Front-end Style Guide
 
+48px (prise depuis la lettre majuscule)
+humanising your difference
+we're different
+
+37px
+find out more
+
+20px
+snappy process \* 3
+
 ## Layout
 
 The designs were created to the following widths:

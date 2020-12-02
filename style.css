@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* custom properties */
+:root {
+  --ff-primary: "Karla", sans-serif;
+  --ff-secondary: "DM Serif Display", serif;
+
+  --clr-light-violet: hsl(256, 26%, 20%);
+  --clr-light-blue: hsl(216, 30%, 68%);
+  --clr-dark-violet: hsl(270, 9%, 17%);
+  --clr-dark-gray: hsl(273, 4%, 51%);
+  --clr-light-gray: hsl(0, 0%, 98%);
+
+  --fs-h1: 1.88rem; /*32px*/
+  --fs-h2: 1.88rem; /*32px*/
+  --fs-h3: 1.235rem; /*21px*/
+  --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 2.82rem; /*48px*/
+    --fs-h2: 2.82rem; /*48px*/
+  }
+}
+
+/* general style */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--clr-light-gray);
+  color: var(--clr-dark-gray);
+  font-family: var(--ff-primary);
+  line-height: 1.4;
+  font-size: 17px;
+}
+
+header {
+  padding: 1.76em 1.58em;
+  max-width: 100%;
+  background: lightblue;
+}
+
+section {
+  padding: 0 1.58em;
+  max-width: 100%;
+  background: lightpink;
+}
+
+/* typography */
+h1 {
+  font-size: var(--fs-h1);
+  font-family: var(--ff-secondary);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-family: var(--ff-secondary);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-family: var(--ff-secondary);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
