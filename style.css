@@ -86,6 +86,7 @@ body {
 
 header {
   max-width: 100%;
+  position: relative;
 }
 
 .logo-container {
@@ -156,8 +157,25 @@ p {
   visibility: hidden;
 }
 
+.nav-visible {
+  visibility: visible;
+  position: relative;
+}
+
+.nav-toggle-toopen {
+  display: block;
+}
+
+.nav-toggle-toopen-inactive {
+  display: none;
+}
+
 .nav-toggle-toclose {
   display: none;
+}
+
+.nav-toggle-toclose-active {
+  display: block;
 }
 
 /* nav ul */
@@ -173,9 +191,9 @@ p {
 .nav__link {
   text-transform: uppercase;
   color: var(--clr-light-gray);
-  font-size: var(--fs-h3);
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 /* || hero */
