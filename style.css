@@ -349,7 +349,7 @@ p {
 
 .footer__logo-social {
   padding-bottom: 2em;
-  border-bottom: 1px solid var(--clr-dark-gray);
+  border-bottom: 0.5px solid var(--clr-dark-gray);
   position: relative;
 }
 
@@ -600,7 +600,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 4.3em 5em;
-    margin-bottom: 10em;
+    margin-bottom: 8em;
   }
 
   .cta__title {
