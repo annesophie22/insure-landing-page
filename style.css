@@ -7,7 +7,6 @@
 }
 
 /* reset */
-body,
 h1,
 h2,
 h3,
@@ -16,6 +15,10 @@ ul,
 button {
   margin: 0;
   padding: 0;
+}
+
+body {
+  margin: 0 auto;
 }
 
 img {
@@ -86,19 +89,12 @@ header {
   position: relative;
 }
 
-.logo-container {
-  padding: 1.76em var(--padding-side-sm);
-  max-width: 100%;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-}
-
 footer {
   max-width: 100%;
   background: var(--clr-light-gray);
+  padding: 6em var(--padding-side-sm);
+  text-align: center;
+  position: relative;
 }
 
 .btn {
@@ -149,11 +145,19 @@ p {
 }
 
 /* || header */
+
 .logo-container {
+  padding: 1.76em var(--padding-side-sm);
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
 }
 
 .nav {
@@ -209,16 +213,28 @@ p {
 }
 
 /* || hero */
-.intro-right-desktop {
-  display: none;
+
+.intro-right-mobile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -200px;
 }
 
+.intro-left-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.intro-right-desktop,
 .intro-left-desktop {
   display: none;
 }
 
 .hero-section {
   background: var(--clr-light-violet);
+  position: relative;
 }
 
 .hero__img--desktop {
@@ -235,10 +251,12 @@ p {
   padding: 5em var(--padding-side-sm);
   text-align: center;
   color: var(--clr-light-gray);
+  position: relative;
 }
 
 .hero__title {
   margin-bottom: 0.5em;
+  position: relative;
 }
 
 .hero__img {
@@ -250,7 +268,8 @@ p {
   margin-bottom: 2.5em;
 }
 
-/* || features */
+/* || features  */
+
 .features-container {
   padding: 8em var(--padding-side-sm) 5em;
   text-align: center;
@@ -298,6 +317,13 @@ p {
   z-index: 9999;
 }
 
+.how-we-work-mobile {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .how-we-work-desktop {
   display: none;
 }
@@ -307,25 +333,24 @@ p {
   font-family: var(--ff-secondary);
   line-height: 1;
   margin-bottom: 1em;
+  position: relative;
 }
 
 /* || footer */
-.footer-desktop {
-  display: none;
+.img-footer-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.footer {
-  padding: 6em var(--padding-side-sm);
-  text-align: center;
-  position: relative;
-  z-index: -1;
+.img-footer-desktop {
+  display: none;
 }
 
 .footer__logo-social {
   padding-bottom: 2em;
   border-bottom: 1px solid var(--clr-dark-gray);
   position: relative;
-  z-index: 1;
 }
 
 .social {
@@ -339,7 +364,6 @@ p {
 
 .footer-grid {
   position: relative;
-  z-index: 1;
 }
 
 .footer-grid__item {
@@ -353,6 +377,10 @@ p {
   letter-spacing: 0.5px;
 }
 
+.footer-grid__item li:not(:last-child) {
+  margin-bottom: 1em;
+}
+
 .footer-grid__links {
   display: flex;
   flex-direction: column;
@@ -362,14 +390,11 @@ p {
   display: inline-block;
   color: var(--clr-dark-violet);
   letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .footer-grid__link:hover {
   text-decoration: underline;
-}
-
-.footer-grid__link:not(:last-child) {
-  margin-bottom: 1.2em;
 }
 
 .icon:hover {
@@ -415,27 +440,6 @@ p {
   .hero-section {
     position: relative;
     z-index: 0;
-  }
-
-  .intro-right-desktop {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  .intro-left-desktop {
-    display: block;
-    position: absolute;
-    bottom: -45%;
-    left: 0;
-    height: 70%;
-  }
-
-  .how-we-work-desktop {
-    display: block;
-    position: absolute;
-    right: 0;
   }
 
   .logo-container {
@@ -486,6 +490,26 @@ p {
 
   .btn {
     padding: 0.7rem 1.5rem;
+  }
+
+  .intro-right-mobile,
+  .intro-left-mobile {
+    display: none;
+  }
+
+  .intro-right-desktop {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .intro-left-desktop {
+    display: block;
+    position: absolute;
+    bottom: -45%;
+    left: 0;
+    height: 70%;
   }
 
   .hero-section {
@@ -584,6 +608,20 @@ p {
     margin-bottom: 0;
     max-width: 50%;
     text-align: left;
+  }
+
+  .how-we-work-mobile {
+    display: none;
+  }
+
+  .how-we-work-desktop {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+
+  .img-footer-mobile {
+    display: none;
   }
 
   .img-footer-desktop {
